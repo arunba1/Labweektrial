@@ -141,6 +141,10 @@ class _UserscreenState extends State<Userscreen> {
       if (response.statusCode == 200) {
         // Handle successful response
         print('Data sent successfully!');
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text('User added Successfully!!!'),
+          duration: Duration(seconds: 3),
+        ));
       } else {
         // Handle error
         print('Failed to send data. Status code: ${response.statusCode}');
